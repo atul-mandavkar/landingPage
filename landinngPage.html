@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing page project</title>
+</head>
+<body>
+  <header id="header">
+    <div id="leftside">
+        <img id="header-img" src="https://raw.githubusercontent.com/alfranc/alfranc.github.io/master/original_trombones.png" alt="Thrombones logo"/>
+    </div>
+    <div id"rightside">
+        <nav id="nav-bar">
+  <!-- 
+To connect anchor tag to topic in same page use "# with id" of topic in href attribute of that anchor tag
+-->
+            <a class="nav-link" href="#topic1">Features</a>
+            <a class="nav-link" href="#topic2">How it works</a>
+            <a class="nav-link" href="#topic3">Pricing</a>
+        </nav>
+    </div>
+</header>
+<main>
+    <div id="upper-content">
+        <h1>Handcrafted, home-made masterpieces</h1>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <label for="email">
+              <input type="email" placeholder="Enter your email" id="email" />
+            </label><br>
+            <input type="submit" value="Get started" id="submit" />
+        </form>
+    </div>
+    <div id="topic1">
+        <div id="topic1-1">
+            <img src="https://image.flaticon.com/icons/png/512/14/14165.png" alt="premium material" class="img-left"/>
+            <h2 class="text-right">Premium Materials</h2>
+            <p class="text-right">Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
+        </div><br>
+        <div id="topic1-2">
+            <img src="https://image.flaticon.com/icons/png/512/98/98999.png"  class="img-left"/>
+            <h2 class="text-right">Fast Shipping</h2>
+            <p class="text-right">We make sure you recieve your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied.</p>
+        </div>
+        <div id="topic1-3">
+            <img src="https://cdn0.iconfinder.com/data/icons/business-and-finance-4-5/68/188-512.png"  class="img-left"/>
+            <h2 class="text-right">Quality Assuarance</h2>
+            <p class="text-right">For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.</p>
+        </div>
+    </div>
+    <div id="topic2">
+        <iframe src="https://youtube.com/embed/y8Yv4pnO7qc" title="Roman Carnival Overture Op. 9 for Five Trombones" id="video">
+        </iframe>
+<!-- 
+The iframe tag is used for showing embeded video from youtube or any other site but not video tag 
+And title attribute for screen readers -->
+    </div>
+    <div id="topic3">
+        <div id="topic3-1" class="price">
+            <h3 class="heading-3">TENOR THROMBONE</h3>
+            <p class="para-3"><strong>$600</strong>
+              <br>Lorem ipsum.
+              <br>Lorem ipsum.
+              <br>Lorem ipsum dolor.
+              <br>Lorem ipsum.
+            </p>
+            <button class="button-3">SELECT</button>
+        </div>
+        <div id="topic3-2" class="price">
+            <h3 class="heading-3">BRASS THROMBONE</h3>
+            <p class="para-3"><strong>$900</strong>
+              <br>Lorem ipsum.
+              <br>Lorem ipsum.
+              <br>Lorem ipsum dolor.
+              <br>Lorem ipsum.
+            </p>
+            <button class="button-3">SELECT</button>
+        </div>
+        <div id="topic3-3" class="price">
+            <h3 class="heading-3">VALVE THROMBONE</h3>
+            <p class="para-3"><strong>$1200</strong>
+              <br>Lorem ipsum.
+              <br>Lorem ipsum.
+              <br>Lorem ipsum dolor.
+              <br>Lorem ipsum.
+            </p>
+            <button class="button-3">SELECT</button>
+        </div>
+    </div>
+</main>
+<footer>
+    <div>
+        <nav>
+            <a src="#">Privacy</a>
+            <a src="#">Terms</a>
+            <a src="#">Contact</a>
+        </nav>
+        <br>Copyright 2020, Atul Mandavkar
+    </div>
+</footer>
+<style>
+  #header{
+      display: flex;
+      flow-direction: row;
+      width: 100%;
+      position: fixed;
+      height: auto;
+      top: -10px;
+      z-index: 1;
+      background-color: white;
+  }
+/*
+Alwaus give display: flex to container and for formatting style of elements in container alwaus use > symbol to show element from which container
+*/
+  #header > div{
+      margin: 10px;
+      padding: 20px;
+  }
+  #leftside{
+      float: left;
+      flex-grow: 1;
+  }
+  #rightside{
+      float: right;
+      flex-grow: 3;
+  }
+  #header-img{
+      width: 400px;
+  }
+  #nav-bar{
+      width: 400px;
+      display: flex;
+      flex-direction: row;
+  }
+  #nav-bar > a{
+      font-size: 24px;
+      padding: auto;
+      margin: auto;
+  }
+  .nav-link{
+      color: black;
+      text-decoration: none; /* To remove underline of anchor tag*/
+  }
+  main{
+    text-align: center;
+    position: relative;
+    top: 250px;
+  }
+  #upper-content{
+      width: 100%;
+      height: 250px;
+      margin:  auto;
+    }
+  #email{
+      width: 300px;
+      height: 30px;
+      font-size: 24px;
+  }
+  #submit{
+      width: 150px;
+      height: 30px;
+      background-color: rgba(254,178,0,1);
+      border: 1px solid transparent;
+      font-weight: bold;
+      font-size: 20px;
+      margin: 20px;
+  }
+  #topic1{
+      width: 70%;
+      height: auto;
+      margin: auto;
+  }
+  #topic1-1, #topic1-2, #topic1-3{
+      width: 100%;
+      height: 150px;
+      margin: auto;
+  }
+  .img-left{
+      width: 100px;
+      height: 100px;
+      float: left;
+  }
+  .text-right{
+      width: 70%;
+      margin: auto;
+      text-align: left;
+  }
+  #topic2{
+      width: 50%;
+      height: auto;
+      margin: auto;
+  }
+  #video{
+      width: 100%;
+      height: 300px;
+      border: 1px solid;
+  }
+  #topic3{
+      width: 80%;
+      height: auto;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+  }
+  #topic3 > .price{
+      width: 30%;
+      height: auto;
+      margin: 10px;
+      border: 1px solid;
+  }
+  .heading-3{
+      background-color: rgba(0,0,0,0.1);
+      line-height: 50px;
+      margin-top: 0px;
+  }
+  p strong{
+      font-size: 30px;
+      line-height: 50px;
+  }
+  .para-3{
+      font-size: 18px;
+      line-height: 30px;
+  }
+  .button-3{
+      background-color: #E9A447;
+      border: none;
+      font-size: 24px;
+      width: 130px;
+      height: 50px;
+      margin: 10px;
+  }
+  footer{
+      width: 80%;
+      height: auto;
+      background-color: rgba(0,0,0,0.1);
+      margin: 30px auto 0px auto;
+      text-align: right;
+      position: relative;
+      top: 250px;
+  }
+  footer div{
+      padding: 20px;
+      line-height: 10px;
+  }
+  footer div nav a{
+      padding: 10px;
+      font-weight: bold;
+  }
+  
+  @media (max-width: 600px){
+        #header{ flex-direction: column; }
+      #nav-bar{ flex-direction: column; }
+      #header-img{ width: 300px; margin-left: 50px; }
+      #topic1{ width: 100%; }
+      .img-left{ display: none; }
+      .text-right{ width: 100%; text-align: center; }
+      #topic2{ width: 100%; }
+      #topic3{ flex-direction: column; width: 70%; }
+      #topic3 > .price{
+      width: 100%;
+      margin: 10px auto;
+      }
+      footer{ width: 100%; }
+  }
+</style>
+</body>
+</html>
